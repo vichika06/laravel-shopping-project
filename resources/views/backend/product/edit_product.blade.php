@@ -40,39 +40,41 @@ EDITING PRODUCT
                             <div class="mb-3 col-6">
                                 <label for="formFile" class="form-label">Available Size</label>
                                 <select name="update_size[]" class="form-control size-color" multiple="multiple">
-                                    <!-- multiple select -->
                                     @php
-                                    $selectSize = json_decode($row[0]->size,true);
+                                    $selectSize = explode(',', $row[0]->size);
                                     @endphp
 
-                                    <option value="s" {{ in_array('s',  $selectSize ?? []) ? 'selected' : ''}}>S</option>
-                                    <option value="m" {{ in_array('m',  $selectSize ?? []) ? 'selected' : ''}}>M</option>
-                                    <option value="l" {{ in_array('l',  $selectSize ?? []) ? 'selected' : ''}}>L</option>
-                                    <option value="xl" {{ in_array('xl',  $selectSize ?? []) ? 'selected' : ''}}>XL</option>
-                                    <option value="2xl" {{ in_array('2xl',  $selectSize ?? []) ? 'selected' : ''}}>2XL</option>
-
+                                    <option value="s" {{ in_array('s', $selectSize) ? 'selected' : ''}}>S</option>
+                                    <option value="m" {{ in_array('m', $selectSize) ? 'selected' : ''}}>M</option>
+                                    <option value="l" {{ in_array('l', $selectSize) ? 'selected' : ''}}>L</option>
+                                    <option value="xl" {{ in_array('xl', $selectSize) ? 'selected' : ''}}>XL</option>
+                                    <option value="2xl" {{ in_array('2xl', $selectSize) ? 'selected' : ''}}>2XL</option>
                                 </select>
                             </div>
                             <div class="mb-3 col-6">
                                 <label for="formFile" class="form-label">Available Color</label>
                                 <select name="update_color[]" class="form-control size-color" multiple="multiple">
                                     @php
-                                    $selectColor = json_decode($row[0]->color,true);
+                                    $selectColor = explode(',', $row[0]->color);
                                     @endphp
-                                    <option value="black" {{ in_array('black',  $selectColor ?? []) ? 'selected' : '' }}>Black</option>
-                                    <option value="yellow" {{ in_array('yellow',  $selectColor ?? []) ? 'selected' : '' }}>Yellow</option>
-                                    <option value="white" {{ in_array('white',  $selectColor ?? []) ? 'selected' : '' }}>White</option>
-                                    <option value="blue" {{ in_array('blue',  $selectColor ?? []) ? 'selected' : '' }}>Blue</option>
 
-                                </select>
+                                    <option value="black" {{ in_array('black', $selectColor) ? 'selected' : '' }}>Black</option>
+                                    <option value="yellow" {{ in_array('yellow', $selectColor) ? 'selected' : '' }}>Yellow</option>
+                                    <option value="white" {{ in_array('white', $selectColor) ? 'selected' : '' }}>White</option>
+                                    <option value="blue" {{ in_array('blue', $selectColor) ? 'selected' : '' }}>Blue</option>
                                 </select>
                             </div>
+
                             <div class="mb-3 col-6">
                                 <label for="formFile" class="form-label">Category</label>
-                                <select name="update_category" class="form-control">
 
+                                <select name="update_category" class="form-control">
+                                    <option value="T-shirt" {{$categories[0]->name == 'T-shirt' ? 'selected' : ''}}>T-shirt</option>
+                                    <option value="Sweather" {{$categories[0]->name == 'Sweather' ? 'selected' : ''}}>Sweather</option>
+                                    <option value="Shirt" {{$categories[0]->name == 'Shirt' ? 'selected' : '' }} >Shirt</option>
                                 </select>
                             </div>
+
                             <div class="mb-3 col-6">
                                 <label for="formFile" class="form-label text-danger">Recommend image size ..x.. pixels.</label>
                                 <input class="form-control" value="../assets/image/{{$row[0]->thumbnail}}" type="file" name="update_thumbnail" />

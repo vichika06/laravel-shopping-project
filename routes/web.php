@@ -65,5 +65,5 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/admin/product/submit-product', [AdminProductcontroller::class , 'submitProduct'] )->name('submit-product');
 
 // edit
-    Route::get('admin/edite-product/{id}', [AdminProductcontroller::class , 'EditProduct'])->name('edit_product');
+        Route::get('admin/edite-product/{id}/{category_id}', [AdminProductcontroller::class , 'EditProduct'])->name('edit_product');
     Route::post('admin/submitEdit' , [AdminProductcontroller::class , 'submitEdit'])->name('submitEdit');

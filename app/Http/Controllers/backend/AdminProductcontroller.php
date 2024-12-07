@@ -62,17 +62,28 @@ class AdminProductcontroller extends Controller
         }
     }
 
-    public function EditProduct($id)
+    public function EditProduct($id, $category_id)
     {
         $row = DB::table('product')
             ->Where('id', $id)
             ->get();
-        return view('backend.product.edit_product', ['row' => $row]);
+        $categories = DB::table('category')
+            ->Where('id', $category_id)
+            ->get();
+        // return $categories[0]->name;
+        return view('backend.product.edit_product', ['row' => $row, 'categories' => $categories]);
     }
 
-    public function submitEdit(){
-        
-    }
+    // public function EditProduct($id)
+    // {
+    //     $products = DB::table('products')
+    //         ->join('categories', 'products.category_id', '=', 'categories.id')
+    //         ->select('products.*', 'categories.name as category_name')
+    //         ->get();
+
+    //     return view('product.index', compact('product'));
+    // }
+    public function submitEdit() {}
 
 
     // logo
@@ -80,7 +91,7 @@ class AdminProductcontroller extends Controller
     {
         $logo = DB::table('logo')->get();
 
-        return view('backend.logo.viewLogo' , ['logo'=>$logo]);
+        return view('backend.logo.viewLogo', ['logo' => $logo]);
     }
     public function addLogo()
     {
@@ -96,12 +107,12 @@ class AdminProductcontroller extends Controller
         $logo->move($path, $image);
 
         $result = DB::table('logo')->insert([
-            'name'=>$name,
+            'name' => $name,
             'thumbnail' => $image
         ]);
 
-        if($result){
-            return view ('view-logo');
+        if ($result) {
+            return view('view-logo');
         }
     }
 }
