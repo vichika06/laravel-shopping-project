@@ -62,28 +62,59 @@ class AdminProductcontroller extends Controller
         }
     }
 
-    public function EditProduct($id, $category_id)
+    public function EditProduct($id)
     {
-        $row = DB::table('product')
-            ->Where('id', $id)
+        $products = DB::table('product')
+            ->join('category', 'product.category_id', '=', 'category.id')
+            ->select('product.*', 'category.id AS cat_id', 'category.name AS cat_name')
+            ->where('product.id', $id)
             ->get();
-        $categories = DB::table('category')
-            ->Where('id', $category_id)
+        $category = DB::table('category')
             ->get();
-        // return $categories[0]->name;
-        return view('backend.product.edit_product', ['row' => $row, 'categories' => $categories]);
+        return view('backend.product.edit_product', ['products' => $products, 'category' => $category]);
     }
 
-    // public function EditProduct($id)
-    // {
-    //     $products = DB::table('products')
-    //         ->join('categories', 'products.category_id', '=', 'categories.id')
-    //         ->select('products.*', 'categories.name as category_name')
-    //         ->get();
 
-    //     return view('product.index', compact('product'));
-    // }
-    public function submitEdit() {}
+    public function submitEdit(Request $request)
+    {
+        $id            = $request->input('update_id');
+        $name          =  $request->input('update_name');
+        $qty           =  $request->input('update_qty');
+        $regular_price =  $request->input('update_regular_price');
+        $sale_price    =  $request->input('update_sale_price');
+        $size          =  implode(',', $request->input('update_size'));
+        $color         =  implode(',', $request->input('update_color'));
+        $description   =  $request->input('update_description');
+        $category_id   =  $request->input('update_category');
+        $thumbnail     =  $request->file('update_thumbnail');
+        if (empty($thumbnail)) {
+            
+            $product = DB::table('product')->where('id', $id)->first();
+            $img = $product->thumbnail;
+        } else {
+            $image = $thumbnail;
+            $path   = './assets/image';
+            $img   = time() . '-' . $image->getClientOriginalName();
+            $image->move($path, $img);
+        }
+
+        $result = DB::table('product')
+            ->where('id', $id)
+            ->update([
+                'name' => $name,
+                'regular_price' => $regular_price,
+                'sale_price' => $sale_price,
+                'qty' => $qty,
+                'thumbnail' => $img,
+                'color' => $color,
+                'size'  => $size,
+                'description' => $description,
+                'category_id' => $category_id,
+            ]);
+        if ($result) {
+            return redirect('admin/view-product')->with('success', 'Product updated successfully');
+        }
+    }
 
 
     // logo
@@ -113,6 +144,15 @@ class AdminProductcontroller extends Controller
 
         if ($result) {
             return view('view-logo');
+        }
+    }
+ 
+    public function removeProduct(Request $request){
+        $id = $request -> input('remove-id');
+        $result = DB::table('product')->where('id',$id)->delete();
+
+        if($result){
+            return redirect('/admin/view-product');
         }
     }
 }

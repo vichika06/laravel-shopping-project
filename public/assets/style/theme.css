@@ -144,7 +144,9 @@ figure .thumbnail .status {
     color: var(--white);
     background-color: var(--pink);
 }
-
+.thumbnail img{
+    object-fit: contain;
+}
 
 .product-detail .review .detail .price-list ,
 .product-detail .review .detail .title ,
@@ -219,6 +221,7 @@ figure .thumbnail .status {
     z-index: 100;
     position: absolute;
     width: fit-content;
+
     padding: 5px;
     color: var(--white);
     background-color: var(--pink);

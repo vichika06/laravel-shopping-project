@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('.size-color').select2();
 
     //Append Value for remove post
-    $('#remove-post-key').click(function() {
+    $('.remove-post-key').click(function() {
         var postId = $(this).attr('data-value');
         $('#remove-val').val(postId);
     })

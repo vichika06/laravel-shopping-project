@@ -5,291 +5,221 @@
     @endsection
 
     @section('main_page')
+    <main>
             <main class="shop">
-                    <section>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3 class="main-title">
-                                        SHOP BLOG
-                                    </h3>
+                <section>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <figure>
+                                            <div class="thumbnail">
+                                                <div class="status">
+                                                    Promotion
+                                                </div>
+                                                <a href="">
+                                                    <img src="https://placehold.co/450x670" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="price-list">
+                                                    <div class="price d-none">US 10</div>
+                                                    <div class="regular-price "><strike> US 15</strike></div>
+                                                    <div class="sale-price ">US 12</div>
+                                                </div>
+                                                <h5 class="title">T-Shirt 001</h5>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure>
+                                            <div class="thumbnail">
+                                                <div class="status">
+                                                    Promotion
+                                                </div>
+                                                <a href="">
+                                                    <img src="https://placehold.co/450x670" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="price-list">
+                                                    <div class="price d-none">US 10</div>
+                                                    <div class="regular-price "><strike> US 15</strike></div>
+                                                    <div class="sale-price ">US 12</div>
+                                                </div>
+                                                <h5 class="title">T-Shirt 001</h5>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure>
+                                            <div class="thumbnail">
+                                                <div class="status">
+                                                    Promotion
+                                                </div>
+                                                <a href="">
+                                                    <img src="https://placehold.co/450x670" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="price-list">
+                                                    <div class="price d-none">US 10</div>
+                                                    <div class="regular-price "><strike> US 15</strike></div>
+                                                    <div class="sale-price ">US 12</div>
+                                                </div>
+                                                <h5 class="title">T-Shirt 001</h5>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure>
+                                            <div class="thumbnail">
+                                                <div class="status">
+                                                    Promotion
+                                                </div>
+                                                <a href="">
+                                                    <img src="https://placehold.co/450x670" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="price-list">
+                                                    <div class="price d-none">US 10</div>
+                                                    <div class="regular-price "><strike> US 15</strike></div>
+                                                    <div class="sale-price ">US 12</div>
+                                                </div>
+                                                <h5 class="title">T-Shirt 001</h5>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure>
+                                            <div class="thumbnail">
+                                                <div class="status">
+                                                    Promotion
+                                                </div>
+                                                <a href="">
+                                                    <img src="https://placehold.co/450x670" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="price-list">
+                                                    <div class="price d-none">US 10</div>
+                                                    <div class="regular-price "><strike> US 15</strike></div>
+                                                    <div class="sale-price ">US 12</div>
+                                                </div>
+                                                <h5 class="title">T-Shirt 001</h5>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure>
+                                            <div class="thumbnail">
+                                                <div class="status">
+                                                    Promotion
+                                                </div>
+                                                <a href="">
+                                                    <img src="https://placehold.co/450x670" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="price-list">
+                                                    <div class="price d-none">US 10</div>
+                                                    <div class="regular-price "><strike> US 15</strike></div>
+                                                    <div class="sale-price ">US 12</div>
+                                                </div>
+                                                <h5 class="title">T-Shirt 001</h5>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure>
+                                            <div class="thumbnail">
+                                                <div class="status">
+                                                    Promotion
+                                                </div>
+                                                <a href="">
+                                                    <img src="https://placehold.co/450x670" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="price-list">
+                                                    <div class="price d-none">US 10</div>
+                                                    <div class="regular-price "><strike> US 15</strike></div>
+                                                    <div class="sale-price ">US 12</div>
+                                                </div>
+                                                <h5 class="title">T-Shirt 001</h5>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    <div class="col-4">
+                                        <figure>
+                                            <div class="thumbnail">
+                                                <div class="status">
+                                                    Promotion
+                                                </div>
+                                                <a href="">
+                                                    <img src="https://placehold.co/450x670" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="detail">
+                                                <div class="price-list">
+                                                    <div class="price d-none">US 10</div>
+                                                    <div class="regular-price "><strike> US 15</strike></div>
+                                                    <div class="sale-price ">US 12</div>
+                                                </div>
+                                                <h5 class="title">T-Shirt 001</h5>
+                                            </div>
+                                        </figure>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <ul class="pagination">
+                                            <li>
+                                                <a href="/shop?page=1">1</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                            <div class="status">
-                                                Promotion
-                                            </div>
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
+                            <div class="col-3 filter">
+                                <h4 class="title">Category</h4>
+                                <ul>
+                                    <li>
+                                        <a href="/shop">ALL</a>
+                                    </li>
+                                    <li>
+                                        <a href="/shop?cat=">Men</a>
+                                    </li> 
+                                    <li>
+                                        <a href="/shop?cat=">Women</a>
+                                    </li> 
+                                    <li>
+                                        <a href="/shop?cat=">Girl</a>
+                                    </li> 
+                                    <li>
+                                        <a href="/shop?cat=">Boy</a>
+                                    </li> 
+                                </ul>
+                                
+                                <h4 class="title mt-4">Price</h4>
+                                <div class="block-price mt-4">
+                                    <a href="/shop?price=max">High</a>
+                                    <a href="/shop?price=min">Low</a>
                                 </div>
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                            <div class="status">
-                                                Promotion
-                                            </div>
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
+            
+                                <h4 class="title mt-4">Promotion</h4>
+                                <div class="block-price mt-4">
+                                    <a href="/shop?promotion=true">Promotion Product</a>
                                 </div>
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                            <div class="status">
-                                                Promotion
-                                            </div>
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                            <div class="status">
-                                                Promotion
-                                            </div>
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3 class="main-title">
-                                        PROMOTION PRODUCTS
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                                <!-- <div class="status">
-                                                Promotion
-                                            </div>  -->
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                                <!-- <div class="status">
-                                                Promotion
-                                            </div>  -->
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                                <!-- <div class="status">
-                                                Promotion
-                                            </div>  -->
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                                <!-- <div class="status">
-                                                Promotion
-                                            </div>  -->
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </section>  
-
-                    <section>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3 class="main-title">
-                                        POPULAR PRODUCTS
-                                    </h3>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                            <!-- <div class="status">
-                                                Promotion
-                                            </div>  -->
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                            <!-- <div class="status">
-                                                Promotion
-                                            </div>  -->
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                        <!-- <div class="status">
-                                                Promotion
-                                            </div>  -->
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
-                                </div>
-                                <div class="col-3">
-                                    <figure>
-                                        <div class="thumbnail">
-                                            <!-- <div class="status">
-                                                Promotion
-                                            </div> -->
-                                            <a href="">
-                                                <img src="https://placehold.co/450x670" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="detail">
-                                            <div class="price-list">
-                                                <div class="price d-none">US 10</div>
-                                                <div class="regular-price "><strike> US 15</strike></div>
-                                                <div class="sale-price ">US 12</div>
-                                            </div>
-                                            <h5 class="title">T-Shirt 001</h5>
-                                        </div>
-                                    </figure>
-                                </div>
+            
                             </div>
                         </div>
-                    </section>
-
-                </main>  
-
+                    </div>
+                </section>
+            
+            </main>
+        </main>
     @endsection
         
         

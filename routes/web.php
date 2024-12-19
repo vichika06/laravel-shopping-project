@@ -20,13 +20,16 @@ use App\Http\Controllers\backend\CategoryController;
 
 // frontend
 Route::get('/', [shoppingController::class, 'home'])->name('home');
+
 Route::get('/shops', [shoppingController::class, 'shops'])->name('shops');
 Route::get('/news', [shoppingController::class, 'news'])->name('news');
 
-Route::get('/detail', [shoppingController::class, 'detail'])->name('detail');
+Route::get('/detail/{id}', [shoppingController::class, 'detail'])->name('detail');
 Route::get('/search', [shoppingController::class, 'search'])->name('search');
 
-// backend
+
+
+//------------------ backend
 
 
 // login & register
@@ -38,8 +41,8 @@ Route::post('/submit_register', [AuthController::class, 'submit_register'])->nam
 
 // logout
 
-Route::get('/logout' , [AuthController::class , 'logout'])->name('logout');
-Route::post('/submit_logout' , [AuthController::class , 'submitlogout'])->name('submit-logout');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/submit_logout', [AuthController::class, 'submitlogout'])->name('submit-logout');
 
 Route::middleware(['auth'])->group(function () {
     // dashboard
@@ -56,14 +59,16 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // logo
-    Route::get('/admin/view_logo' , [AdminProductcontroller::class,'viewLogo'])->name('view-logo');
-    Route::get('/admin/add_logo', [AdminProductcontroller::class , 'addLogo'])->name('add-logo');
-    Route::post('/admin/submit_add_logo', [AdminProductcontroller::class , 'submitAddLogo'])->name('submit-add-logo');
+Route::get('/admin/view_logo', [AdminProductcontroller::class, 'viewLogo'])->name('view-logo');
+Route::get('/admin/add_logo', [AdminProductcontroller::class, 'addLogo'])->name('add-logo');
+Route::post('/admin/submit_add_logo', [AdminProductcontroller::class, 'submitAddLogo'])->name('submit-add-logo');
 // product
-    Route::get('/admin/view-product',[AdminProductcontroller::class,'viewProduct'])->name('view-product');
-    Route::get('/admin/add-product' , [AdminProductcontroller::class , 'addPRoduct'])->name('add-product');
-    Route::post('/admin/product/submit-product', [AdminProductcontroller::class , 'submitProduct'] )->name('submit-product');
+Route::get('/admin/view-product', [AdminProductcontroller::class, 'viewProduct'])->name('view-product');
+Route::get('/admin/add-product', [AdminProductcontroller::class, 'addPRoduct'])->name('add-product');
+Route::post('/admin/product/submit-product', [AdminProductcontroller::class, 'submitProduct'])->name('submit-product');
 
-// edit
-        Route::get('admin/edite-product/{id}/{category_id}', [AdminProductcontroller::class , 'EditProduct'])->name('edit_product');
-    Route::post('admin/submitEdit' , [AdminProductcontroller::class , 'submitEdit'])->name('submitEdit');
+//|__..> edit
+Route::get('admin/edite-product/{id}', [AdminProductcontroller::class, 'EditProduct'])->name('edit_product');
+Route::post('admin/submitEdit', [AdminProductcontroller::class, 'submitEdit'])->name('submit_Edit');
+//|__..> remove
+Route::get('admin/removed_product',[AdminProductcontroller::class ,'removeProduct'])->name('remove-product');

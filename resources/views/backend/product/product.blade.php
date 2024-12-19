@@ -77,7 +77,8 @@ Products
         </div>
 
         <div class="mt-3">
-            <form action="" method="post">
+            <form action="{{route('remove-product')}}" method="post">
+                @csrf
                 <div class="modal fade" id="basicModal" tabindex="-1" style="display: none;" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -86,7 +87,7 @@ Products
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-footer">
-                                <input type="hidden" id="remove-val" name="remove-id">
+                                <input type="hidden" id="remove-val" name="remove_id">
                                 <button type="submit" class="btn btn-danger">Confirm</button>
                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
                             </div>
