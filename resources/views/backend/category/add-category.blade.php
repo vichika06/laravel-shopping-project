@@ -5,6 +5,12 @@ Add Category
 @endsection
 
 @section('content')
+@section('site-title')
+    Admin | List News
+    @endsection
+    @section('page-main-title')
+    Add Category
+    @endsection
 <div class="row  p-5">
     <div class="col-xl-12">
         <!-- HTML5 Inputs -->

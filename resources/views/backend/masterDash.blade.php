@@ -198,13 +198,13 @@
 
             <ul class="menu-sub">
               <li class="menu-item">
-                <a href="/admin/list-category" class="menu-link">
+                <a href="{{route('ViewsNews')}}" class="menu-link">
                   <div data-i18n="Without menu">View Post</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="/admin/add-news" class="menu-link">
-                  <div data-i18n="Without menu">Add Post</div>
+                <a href="{{route('addNews')}}" class="menu-link">
+                  <div data-i18n="Without menu">Add Blog</div>
                 </a>
               </li>
             </ul>

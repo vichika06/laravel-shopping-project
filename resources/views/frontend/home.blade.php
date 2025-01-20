@@ -109,18 +109,28 @@
                     <div class="col-3">
                         <figure>
                             <div class="thumbnail">
+                                @if($pupular-> sale_price <$pupular -> regular_price)
 
-                                <a href="">
-                                    <img width="450" height="370" src="../assets/image/{{$pupular->thumbnail}}" alt="">
-                                </a>
+                                    <div class="status">
+                                        Promotion
+                                    </div>
+                                    @else
+                                    <div class="status d-none">
+                                        Promotion
+                                    </div>
+                                    @endif
+
+                                    <a href="">
+                                        <img width="450" height="370" src="../assets/image/{{$pupular->thumbnail}}" alt="">
+                                    </a>
                             </div>
                             <div class="detail">
                                 <div class="price-list">
                                     <div class="price d-none">US 10</div>
-                                    <div class="regular-price "><strike> US 15</strike></div>
-                                    <div class="sale-price ">US 12</div>
+                                    <div class="regular-price "><strike>US {{$pupular->regular_price}} </strike></div>
+                                    <div class="sale-price ">US {{$pupular->sale_price}}</div>
                                 </div>
-                                <h5 class="title">T-Shirt 001</h5>
+                                <h5 class="title">{{$pupular->name}}</h5>
                             </div>
                         </figure>
                     </div>

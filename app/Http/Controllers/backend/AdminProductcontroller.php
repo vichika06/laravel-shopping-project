@@ -88,7 +88,7 @@ class AdminProductcontroller extends Controller
         $category_id   =  $request->input('update_category');
         $thumbnail     =  $request->file('update_thumbnail');
         if (empty($thumbnail)) {
-            
+
             $product = DB::table('product')->where('id', $id)->first();
             $img = $product->thumbnail;
         } else {
@@ -146,13 +146,51 @@ class AdminProductcontroller extends Controller
             return view('view-logo');
         }
     }
- 
-    public function removeProduct(Request $request){
-        $id = $request -> input('remove-id');
-        $result = DB::table('product')->where('id',$id)->delete();
 
-        if($result){
+    public function removeProduct(Request $request)
+    {
+        $id = $request->input('remove-id');
+        $result = DB::table('product')->where('id', $id)->delete();
+
+        if ($result) {
             return redirect('/admin/view-product');
         }
     }
+
+    // New blog
+
+    public function ViewsNews()
+    {
+        $viewNews = DB::table('news')
+            ->get();
+        return view('backend.news.view-news', ['viewNews' => $viewNews]);
+    }
+
+
+    public function AddNews()
+    {
+        return view('backend.news.add-news');
+    }
+    public function submmitAddnews(Request $request)
+    {
+        $title = $request->input('title');
+        $description = $request->input('description');
+        $newsThum = $request->file('thumbnail');
+
+        $path = "./assets/image";
+        $nameImage = time() . '_' . $newsThum->getClientOriginalName();
+        $newsThum->move($path, $nameImage);
+
+        $result = DB::table('news')->insert([
+            'title' => $title,
+            'description' => $description,
+            'thumbnail' => $nameImage
+        ]);
+        if ($result) {
+            return redirect()->route('ViewsNews');
+        } else {
+            return redirect()->back();
+        }
+    }
+    
 }

@@ -1,57 +1,67 @@
 @extends('backend.masterDash')
 
 @section('site-title')
-View Category
+View News
 @endsection
 
 @section('content')
 
 <div class="row p-5">
-@section('site-title')
+    @section('site-title')
     Admin | List News
     @endsection
     @section('page-main-title')
-    Category
+    News
     @endsection
     <div class="card">
         <h5 class="card-header">
             @yield('site-title')
         </h5>
+
         <div class="table-responsive text-nowrap">
+
             <table class="table">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Name</th>
+                        <th>thumbnail</th>
+                        <th>Title</th>
+                        <th>Description</th>
                         <th>Created At</th>
                         <th>Updated at</th>
+                        <th>Action</th>
 
                     </tr>
+
                 </thead>
                 <tbody class="table-border-bottom-0">
-                    @foreach ($row as $category)
-                    <tr>
-                        <td>{{$category -> id}}</td>
-                        <td>{{$category -> name}}</td>
-                        <td>{{$category -> created_at}}</td>
-                        <td>{{$category -> updated_at}}</td>
+                    @foreach ( $viewNews as $row )
 
+                    <tr class="text-center ">
+                        <td><span>{{$row->id}}</span></td>
+                        <td>
+                            <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
+                                <img src="/assets/image/{{$row->thumbnail}}" alt="Avatar" style="width: 150px ; height: 150px;">
+                            </ul>
+                        </td>
+                        <td class=" text-wrap " style="height: 10px;">{{$row->title}}</td>
+                        <td class=" text-wrap " style="height: 10px;">{{$row->description}}</td>
+
+                        <td><span class="badge bg-label-primary me-1">{{$row->created_at}}</span></td>
+                        <td><span class="badge bg-label-primary me-1">{{$row->updated_at}}</span></td>
                         <td>
                             <div class="dropdown">
-                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
-                                    data-bs-toggle="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
                                     <i class="bx bx-dots-vertical-rounded"></i>
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{{route('category.edit',['id'=>$category->id])}}"><i
-                                            class="bx bx-edit-alt me-1"></i> Edit</a>
-                                    <a class="dropdown-item" href="javascript:void(0);" data-value="{{$category -> id}}" data-bs-toggle="modal" data-bs-target="#basicModal" id="remove-post-key"><i class="bx bx-trash me-1"></i>
-                                        Delete
-                                    </a>
+                                    <a class="dropdown-item" href=""><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                    <a class="dropdown-item" id="remove-post-key" data-value="" data-bs-toggle="modal" data-bs-target="#basicModal" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
                                 </div>
                             </div>
                         </td>
                     </tr>
+
                     @endforeach
                 </tbody>
             </table>

@@ -7,114 +7,34 @@ News page
 @section('main_page')
 
 <main class="shop news-blog">
-            <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3 class="main-title">
-                                NEWS BLOG
-                            </h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-3">
-                            <figure>
-                                <div class="thumbnail">
-                                    <a href="/article">
-                                        <img src="https://placehold.co/300x300" alt="">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h5 class="title">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born</h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-3">
-                            <figure>
-                                <div class="thumbnail">
-                                    <a href="/article">
-                                        <img src="https://placehold.co/300x300" alt="">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h5 class="title">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born</h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-3">
-                            <figure>
-                                <div class="thumbnail">
-                                    <a href="/article">
-                                        <img src="https://placehold.co/300x300" alt="">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h5 class="title">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born</h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-3">
-                            <figure>
-                                <div class="thumbnail">
-                                    <a href="/article">
-                                        <img src="https://placehold.co/300x300" alt="">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h5 class="title">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born</h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-3">
-                            <figure>
-                                <div class="thumbnail">
-                                    <a href="/article">
-                                        <img src="https://placehold.co/300x300" alt="">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h5 class="title">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born</h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-3">
-                            <figure>
-                                <div class="thumbnail">
-                                    <a href="/article">
-                                        <img src="https://placehold.co/300x300" alt="">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h5 class="title">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born</h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-3">
-                            <figure>
-                                <div class="thumbnail">
-                                    <a href="/article">
-                                        <img src="https://placehold.co/300x300" alt="">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h5 class="title">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born</h5>
-                                </div>
-                            </figure>
-                        </div>
-                        <div class="col-3">
-                            <figure>
-                                <div class="thumbnail">
-                                    <a href="/article">
-                                        <img src="https://placehold.co/300x300" alt="">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h5 class="title">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born</h5>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="main-title">
+                        NEWS BLOG
+                    </h3>
                 </div>
-            </section>
-        </main>
+            </div>
+            <div class="row">
+                @foreach ($newsBlog as $news )
+
+                <div class="col-3">
+                    <figure>
+                        <div class="thumbnail">
+                            <a href="{{route('News_detail',['id'=>$news->id])}}">
+                                <img width="450" height="370px" src="assets/image/{{$news->thumbnail}}" alt="">
+                            </a>
+                        </div>
+                        <div class="detail">
+                            <h5 class="title">{{$news->title}}</h5>
+                        </div>
+                    </figure>
+                </div>
+
+                @endforeach
+            </div>
+        </div>
+    </section>
+</main>
 @endsection

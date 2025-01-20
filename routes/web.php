@@ -22,6 +22,7 @@ use App\Http\Controllers\backend\CategoryController;
 Route::get('/', [shoppingController::class, 'home'])->name('home');
 
 Route::get('/shops', [shoppingController::class, 'shops'])->name('shops');
+
 Route::get('/news', [shoppingController::class, 'news'])->name('news');
 
 Route::get('/detail/{id}', [shoppingController::class, 'detail'])->name('detail');
@@ -71,4 +72,12 @@ Route::post('/admin/product/submit-product', [AdminProductcontroller::class, 'su
 Route::get('admin/edite-product/{id}', [AdminProductcontroller::class, 'EditProduct'])->name('edit_product');
 Route::post('admin/submitEdit', [AdminProductcontroller::class, 'submitEdit'])->name('submit_Edit');
 //|__..> remove
-Route::get('admin/removed_product',[AdminProductcontroller::class ,'removeProduct'])->name('remove-product');
+Route::get('admin/removed_product', [AdminProductcontroller::class, 'removeProduct'])->name('remove-product');
+
+// news 
+Route::get('/admin/views_news', [AdminProductcontroller::class, 'ViewsNews'])->name('ViewsNews');
+Route::get('/admin/add_news', [AdminProductcontroller::class, 'AddNews'])->name('addNews');
+Route::post('/admin/submit_add_news', [AdminProductcontroller::class, 'submmitAddnews'])->name('SubmitNew');
+Route::get('/admin/news_detail/{id}',[shoppingController::class, 'NewsDetail'])->name('News_detail');
+// shop 
+Route::get('/shop/filter', [shoppingController::class, 'filter'])->name('shop.filter');
