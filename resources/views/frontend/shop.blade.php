@@ -12,257 +12,106 @@ Shops page
                 <div class="row">
                     <div class="col-9">
                         <div class="row">
-                            <div class="col-4">
+                            @if(isset($products))
+
+                            @foreach($products as $product)
+                            <div class="col-3">
                                 <figure>
                                     <div class="thumbnail">
-                                        <div class="status">
-                                            Promotion
-                                        </div>
-                                        <a href="">
-                                            <img src="https://placehold.co/450x670" alt="">
-                                        </a>
+                                        @if($product-> sale_price <$product -> regular_price)
+
+                                            <div class="status">
+                                                Promotion
+                                            </div>
+                                            @else
+                                            <div class="status d-none">
+                                                Promotion
+                                            </div>
+                                            @endif
+
+                                            <a href="{{route('detail', ['id'=>$product->id])}}">
+                                                <img width="450" height="370" src="../assets/image/{{$product->thumbnail}}" alt="">
+                                            </a>
                                     </div>
                                     <div class="detail">
                                         <div class="price-list">
                                             <div class="price d-none">US 10</div>
-                                            <div class="regular-price "><strike> US 15</strike></div>
-                                            <div class="sale-price ">US 12</div>
+                                            <div class="regular-price "><strike>US {{$product->regular_price}} </strike></div>
+                                            <div class="sale-price ">US {{$product->sale_price}}</div>
                                         </div>
-                                        <h5 class="title">T-Shirt 001</h5>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-4">
-                                <figure>
-                                    <div class="thumbnail">
-                                        <div class="status">
-                                            Promotion
-                                        </div>
-                                        <a href="">
-                                            <img src="https://placehold.co/450x670" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="price-list">
-                                            <div class="price d-none">US 10</div>
-                                            <div class="regular-price "><strike> US 15</strike></div>
-                                            <div class="sale-price ">US 12</div>
-                                        </div>
-                                        <h5 class="title">T-Shirt 001</h5>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-4">
-                                <figure>
-                                    <div class="thumbnail">
-                                        <div class="status">
-                                            Promotion
-                                        </div>
-                                        <a href="">
-                                            <img src="https://placehold.co/450x670" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="price-list">
-                                            <div class="price d-none">US 10</div>
-                                            <div class="regular-price "><strike> US 15</strike></div>
-                                            <div class="sale-price ">US 12</div>
-                                        </div>
-                                        <h5 class="title">T-Shirt 001</h5>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-4">
-                                <figure>
-                                    <div class="thumbnail">
-                                        <div class="status">
-                                            Promotion
-                                        </div>
-                                        <a href="">
-                                            <img src="https://placehold.co/450x670" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="price-list">
-                                            <div class="price d-none">US 10</div>
-                                            <div class="regular-price "><strike> US 15</strike></div>
-                                            <div class="sale-price ">US 12</div>
-                                        </div>
-                                        <h5 class="title">T-Shirt 001</h5>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-4">
-                                <figure>
-                                    <div class="thumbnail">
-                                        <div class="status">
-                                            Promotion
-                                        </div>
-                                        <a href="">
-                                            <img src="https://placehold.co/450x670" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="price-list">
-                                            <div class="price d-none">US 10</div>
-                                            <div class="regular-price "><strike> US 15</strike></div>
-                                            <div class="sale-price ">US 12</div>
-                                        </div>
-                                        <h5 class="title">T-Shirt 001</h5>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-4">
-                                <figure>
-                                    <div class="thumbnail">
-                                        <div class="status">
-                                            Promotion
-                                        </div>
-                                        <a href="">
-                                            <img src="https://placehold.co/450x670" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="price-list">
-                                            <div class="price d-none">US 10</div>
-                                            <div class="regular-price "><strike> US 15</strike></div>
-                                            <div class="sale-price ">US 12</div>
-                                        </div>
-                                        <h5 class="title">T-Shirt 001</h5>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-4">
-                                <figure>
-                                    <div class="thumbnail">
-                                        <div class="status">
-                                            Promotion
-                                        </div>
-                                        <a href="">
-                                            <img src="https://placehold.co/450x670" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="price-list">
-                                            <div class="price d-none">US 10</div>
-                                            <div class="regular-price "><strike> US 15</strike></div>
-                                            <div class="sale-price ">US 12</div>
-                                        </div>
-                                        <h5 class="title">T-Shirt 001</h5>
-                                    </div>
-                                </figure>
-                            </div>
-                            <div class="col-4">
-                                <figure>
-                                    <div class="thumbnail">
-                                        <div class="status">
-                                            Promotion
-                                        </div>
-                                        <a href="">
-                                            <img src="https://placehold.co/450x670" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="detail">
-                                        <div class="price-list">
-                                            <div class="price d-none">US 10</div>
-                                            <div class="regular-price "><strike> US 15</strike></div>
-                                            <div class="sale-price ">US 12</div>
-                                        </div>
-                                        <h5 class="title">T-Shirt 001</h5>
+                                        <h5 class="title">{{$product->name}}</h5>
                                     </div>
                                 </figure>
                             </div>
 
-                            <div class="col-12">
-                                <ul class="pagination">
-                                    <li>
-                                        <a href="/shop?page=1">1</a>
-                                    </li>
-                                </ul>
+                            @endforeach
+
+                            <div>
+                                {!! $products->links() !!}
                             </div>
+
+                            @else
+                            <tr>
+                                <td colspan="4">No products found</td>
+                            </tr>
+                            @endif
                         </div>
                     </div>
-                    <div class="col-3 filter ">
+                    <div class="col-3 filter">
+                        <form action="{{route('products.filter')}}" method="GET">
+                            <ul>
+                                <h4>Filter by Color:</h4>
+                                <li>
+                                    <input type="checkbox" name="color[]" value="black" id="black">
+                                    <label for="black"><a href="">Black </a></label>
+                                </li>
 
-                        <h3>
-                            <b>Color</b>
-                        </h3>
-                        <ul>
-                            <li>
-                                <input type="checkbox" name="black">
-                                <label for="black">
-                                    <h4>Black</h4>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="gray">
-                                <label for="gray">
-                                    <h4>Gray</h4>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="white">
-                                <label for="white">
-                                    <h4>White</h4>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="yellow">
-                                <label for="yellow">
-                                    <h4>Yellow</h4>
-                                </label>
-                            </li>
-                        </ul>
-                        <h3>
-                            <b> Size</b>
-                        </h3>
-                        <ul>
+                                <li>
+                                    <input type="checkbox" name="color[]" value="white" id="white">
+                                    <label for="white"><a href="">White</a></label>
+                                </li>
 
-                            <li>
-                                <input type="checkbox" name="s">
-                                <label for="s">
-                                    <h4>S</h4>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="m">
-                                <label for="m">
-                                    <h4>M</h4>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="l">
-                                <label for="l">
-                                    <h4>L</h4>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="xl">
-                                <label for="xl">
-                                    <h4>XL</h4>
-                                </label>
-                            </li>
-                            <li>
-                                <input type="checkbox" name="2xl">
-                                <label for="2xl">
-                                    <h4>2XL</h4>
-                                </label>
-                            </li>
-                        </ul>
+                                <li>
+                                    <input type="checkbox" name="color[]" value="yellow" id="yellow">
+                                    <label for="yellow"><a href="">Yellow</a></label>
 
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color[]" value="blue" id="blue">
+                                    <label for="blue"><a href="">Blue</a></label>
 
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="color[]" value="grey" id="grey">
+                                    <label for="blue"><a href="">Grey</a></label>
 
-                        <h4 class="title mt-4">Price</h4>
-                        <div class="block-price mt-4">
-                            <a href="/shop?price=max">High</a>
-                            <a href="/shop?price=min">Low</a>
-                        </div>
+                                </li>
 
-                        <h4 class="title mt-4">Promotion</h4>
-                        <div class="block-price mt-4">
-                            <a href="/shop?promotion=true">Promotion Product</a>
-                        </div>
+                                <h4>Filter by Size:</h4>
 
+                                <li>
+                                    <input type="checkbox" name="size[]" value="s" id="s">
+                                    <label for="s"><a href="">S</a></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size[]" value="m" id="m">
+                                    <label for="m"><a href="">M</a></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size[]" value="l" id="l">
+                                    <label for="l"><a href="">L</a></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size[]" value="xl" id="xl">
+                                    <label for="xl"><a href="">XL</a></label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" name="size[]" value="2xl" id="2xl">
+                                    <label for="2xl"><a href="">2XL</a></label>
+                                </li>
+                                <button class="btn btn-success m-1" type="submit">Find</button>
+                            </ul>
+                        </form>
                     </div>
                 </div>
             </div>

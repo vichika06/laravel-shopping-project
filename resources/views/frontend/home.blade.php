@@ -120,7 +120,7 @@
                                     </div>
                                     @endif
 
-                                    <a href="">
+                                    <a href="{{route('detail', ['id'=>$pupular->id])}}">
                                         <img width="450" height="370" src="../assets/image/{{$pupular->thumbnail}}" alt="">
                                     </a>
                             </div>

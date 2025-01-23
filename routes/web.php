@@ -80,4 +80,5 @@ Route::get('/admin/add_news', [AdminProductcontroller::class, 'AddNews'])->name(
 Route::post('/admin/submit_add_news', [AdminProductcontroller::class, 'submmitAddnews'])->name('SubmitNew');
 Route::get('/admin/news_detail/{id}',[shoppingController::class, 'NewsDetail'])->name('News_detail');
 // shop 
-Route::get('/shop/filter', [shoppingController::class, 'filter'])->name('shop.filter');
+Route::get('/products/filter', [shoppingController::class, 'filter'])->name('products.filter');
+
