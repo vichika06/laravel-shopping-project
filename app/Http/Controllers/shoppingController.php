@@ -57,9 +57,23 @@ class shoppingController extends Controller
         return view('frontend.detail', ['detailProduct' => $detailProduct, 'relatedProduct' => $relatedProduct]);
     }
 
-    public function search()
+    public function search(Request $request)
     {
-        return view('frontend.search');
+        $search = $request->input('search');
+
+        $SearchForProduct = DB::table('product')
+            ->where('product.name', 'LIKE', '%' . $search . '%')
+            ->orWhere('product.description', 'LIKE', '%' . $search . '%')
+            ->paginate(8);
+        $SearchForNews = DB::table('news')
+            ->where('news.title', 'LIKE', '%' . $search . '%')
+            ->orWhere('news.description', 'LIKE', '%' . $search . '%')
+            ->paginate(8);
+
+        // dd($SearchForNews);
+        // dd($SearchForProduct);
+
+        return view('frontend.search', ['results' => $SearchForProduct, 'resultsNews' => $SearchForNews]);
     }
 
     // news
@@ -82,6 +96,7 @@ class shoppingController extends Controller
         // Get the selected filters
         $colors = $request->input('color', []);
         $sizes = $request->input('size', []);
+        $dis   = $request->input('discount');
 
         // Build the query
         $query = DB::table('product');
@@ -105,11 +120,16 @@ class shoppingController extends Controller
                 }
             });
         }
-
+        // Apply discount filter
+        // if (!empty($dis)) {
+        //     $query->where(function ($q) use ($dis) {
+        //             $q->orWhere('sale_price', '<', 'rigular_price');
+        //     });
+        // }
         // Get the filtered results
         $products = $query->paginate(8);
         // dd($products);
-        // Return view with filtered products
+
         return view('frontend.shop', ['products' => $products]);
     }
 }

@@ -60,7 +60,7 @@ Shops page
                     <div class="col-3 filter">
                         <form action="{{route('products.filter')}}" method="GET">
                             <ul>
-                                <h4>Filter by Color:</h4>
+                                <h4>Color:</h4>
                                 <li>
                                     <input type="checkbox" name="color[]" value="black" id="black">
                                     <label for="black"><a href="">Black </a></label>
@@ -87,7 +87,7 @@ Shops page
 
                                 </li>
 
-                                <h4>Filter by Size:</h4>
+                                <h4>Size:</h4>
 
                                 <li>
                                     <input type="checkbox" name="size[]" value="s" id="s">
@@ -109,7 +109,7 @@ Shops page
                                     <input type="checkbox" name="size[]" value="2xl" id="2xl">
                                     <label for="2xl"><a href="">2XL</a></label>
                                 </li>
-                                <button class="btn btn-success m-1" type="submit">Find</button>
+                                <button class="btn btn-outline-success mt-1 form-control" type="submit">Find</button>
                             </ul>
                         </form>
                     </div>

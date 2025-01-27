@@ -32,7 +32,7 @@
                 </ul>
                 <div class="search">
                     <form action="{{route('search')}}" method="get">
-                        <input type="text" name="s" class="box" placeholder="SEARCH HERE">
+                        <input type="text" name="search" class="box" placeholder="SEARCH HERE">
                         <button>
                             <div style="background-image: url(/assets/image/search.png);
                                         width: 28px;
